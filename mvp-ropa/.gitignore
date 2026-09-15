@@ -1,0 +1,14 @@
+# Credenciales y configuracion local
+config/conexion.php
+
+# Archivos que sube el usuario
+uploads/
+
+# Basura del sistema y del editor
+Thumbs.db
+.DS_Store
+.vscode/
+
+# Copias de seguridad y temporales
+*.bak
+*.log
