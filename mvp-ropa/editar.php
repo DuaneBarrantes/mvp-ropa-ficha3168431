@@ -4,7 +4,7 @@ include 'config/conexion.php';
 
 $id = $_GET['id'];
 
-$stmt = $conexion->prepare("SELECT * FROM prendas WHERE id = ?");
+$stmt = $conexion->prepare("SELECT * FROM prenda WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 
@@ -16,6 +16,10 @@ if (!$fila) {
 }
 
 ?>
+
+<?php include 'includes/header.php'; ?>
+<?php include 'includes/menu.php'; ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -63,6 +67,8 @@ if (!$fila) {
 <br>
 
 <a href="consultar.php">Volver</a>
+
+<?php include 'includes/footer.php'; ?>
 
 </body>
 </html>

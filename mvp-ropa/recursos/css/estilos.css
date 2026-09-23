@@ -1,0 +1,543 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+:root {
+    --negro: #171717;
+    --negro-suave: #242424;
+    --blanco: #ffffff;
+    --crema: #faf8f4;
+    --gris: #6b6b6b;
+    --gris-claro: #e8e5df;
+    --dorado: #b28b57;
+    --dorado-hover: #967344;
+    --rojo: #b94a48;
+    --verde: #4d8065;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radio: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--crema);
+    color: var(--negro);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.encabezado {
+    background: var(--blanco);
+    border-bottom: 1px solid var(--gris-claro);
+    padding: 24px 5%;
+}
+
+.encabezado-contenido {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.marca {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.marca-nombre {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.marca-subtitulo {
+    display: block;
+    margin-top: 4px;
+
+    font-size: 11px;
+    color: var(--gris);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ================================
+   MENÚ
+================================ */
+
+.menu {
+    background: var(--negro);
+    width: 100%;
+}
+
+.menu-contenido {
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu a {
+    color: #eeeeee;
+    text-decoration: none;
+
+    padding: 12px 18px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.25s ease;
+}
+
+.menu a:hover {
+    background: #333333;
+    color: var(--blanco);
+}
+
+.menu a.activo {
+    background: var(--dorado);
+    color: white;
+}
+
+/* ================================
+   CONTENIDO
+================================ */
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 45px auto;
+
+    flex: 1;
+}
+
+.titulo {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+
+    color: var(--negro);
+}
+
+.subtitulo {
+    margin: 0 auto 35px;
+
+    max-width: 650px;
+
+    text-align: center;
+    color: var(--gris);
+    line-height: 1.7;
+}
+
+/* ================================
+   TARJETAS
+================================ */
+
+.tarjeta {
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radio);
+
+    padding: 35px;
+
+    box-shadow: var(--sombra);
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+/* ================================
+   INICIO
+================================ */
+
+.hero {
+    background: var(--negro);
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 75px 50px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+}
+
+.hero-etiqueta {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #d7b47c;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: normal;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 20px auto 35px;
+
+    color: #d5d5d5;
+
+    line-height: 1.8;
+}
+
+/* ================================
+   BOTONES
+================================ */
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--negro);
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.boton:hover {
+    background: var(--negro-suave);
+    transform: translateY(-1px);
+}
+
+.boton-dorado {
+    background: var(--dorado);
+}
+
+.boton-dorado:hover {
+    background: var(--dorado-hover);
+}
+
+.boton-editar {
+    background: #a77a38;
+}
+
+.boton-eliminar {
+    background: var(--rojo);
+}
+
+/* ================================
+   TABLA
+================================ */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+
+    background: white;
+
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+thead {
+    background: var(--negro);
+    color: white;
+}
+
+th {
+    padding: 16px 14px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid var(--gris-claro);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #faf7f1;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.acciones {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+/* ================================
+   FORMULARIOS
+================================ */
+
+.formulario {
+    max-width: 650px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--negro-suave);
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d8d5cf;
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: var(--negro);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--dorado);
+
+    box-shadow: 0 0 0 3px rgba(178, 139, 87, 0.12);
+}
+
+.ayuda {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--gris);
+
+    font-size: 12px;
+}
+
+/* ================================
+   MENSAJES
+================================ */
+
+.mensaje {
+    padding: 14px 18px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.mensaje-exito {
+    background: #edf7f0;
+    color: var(--verde);
+    border: 1px solid #cde5d5;
+}
+
+.mensaje-error {
+    background: #fff0ef;
+    color: var(--rojo);
+    border: 1px solid #ecc7c5;
+}
+
+/* ================================
+   PIE DE PÁGINA
+================================ */
+
+footer {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 28px 20px;
+
+    background: var(--negro);
+
+    color: #cfcfcf;
+
+    text-align: center;
+
+    border-top: 3px solid var(--dorado);
+}
+
+footer p {
+    margin: 4px 0;
+
+    font-size: 13px;
+}
+
+footer .footer-marca {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        padding: 20px;
+    }
+
+    .encabezado-contenido {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu-contenido {
+        flex-wrap: wrap;
+        padding: 8px;
+    }
+
+    .menu a {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .contenedor {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .hero {
+        padding: 50px 25px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .tarjeta,
+    .formulario {
+        padding: 22px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .acciones .boton {
+        width: 100%;
+    }
+}

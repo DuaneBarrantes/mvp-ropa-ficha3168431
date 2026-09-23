@@ -1,42 +1,141 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Registrar prenda</title>
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
+<?php include 'includes/menu.php'; ?>
 
-<h1>Registrar nueva prenda</h1>
 
-<form method="POST" action="guardar.php">
+<main class="contenedor">
 
-    <label>Descripcion:</label>
-    <input type="text" name="descripcion" required>
-    <br><br>
+    <h1 class="titulo">
+        Registrar prenda
+    </h1>
 
-    <label>Talla:</label>
-    <input type="text" name="talla" required>
-    <br><br>
+    <p class="subtitulo">
+        Agrega una nueva prenda al inventario.
+    </p>
 
-    <label>Color:</label>
-    <input type="text" name="color" required>
-    <br><br>
 
-    <label>Precio:</label>
-    <input type="number" name="precio" step="0.01" min="0" required>
-    <br><br>
+    <form
+        method="POST"
+        action="guardar.php"
+        class="formulario"
+    >
 
-    <label>Stock:</label>
-    <input type="number" name="stock" min="0" required>
-    <br><br>
+        <div class="campo">
 
-    <button type="submit">Guardar</button>
+            <label for="descripcion">
+                Descripción
+            </label>
 
-</form>
+            <input
+                type="text"
+                id="descripcion"
+                name="descripcion"
+                maxlength="100"
+                placeholder="Ej. Chaqueta en jean clásica"
+                required
+            >
 
-<br>
+        </div>
 
-<a href="consultar.php">Ver prendas</a>
 
-</body>
-</html>
+        <div class="campo">
+
+            <label for="talla">
+                Talla
+            </label>
+
+            <input
+                type="text"
+                id="talla"
+                name="talla"
+                maxlength="20"
+                placeholder="Ej. M"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="color">
+                Color
+            </label>
+
+            <input
+                type="text"
+                id="color"
+                name="color"
+                maxlength="50"
+                placeholder="Ej. Azul"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="precio">
+                Precio
+            </label>
+
+            <input
+                type="number"
+                id="precio"
+                name="precio"
+                min="0"
+                step="1"
+                placeholder="Ej. 162000"
+                required
+            >
+
+            <small class="ayuda">
+                Escribe el precio sin puntos ni símbolos.
+            </small>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="stock">
+                Stock
+            </label>
+
+            <input
+                type="number"
+                id="stock"
+                name="stock"
+                min="0"
+                step="1"
+                placeholder="Ej. 10"
+                required
+            >
+
+        </div>
+
+
+        <div class="botones">
+
+            <button
+                type="submit"
+                class="boton boton-dorado"
+            >
+                Guardar prenda
+            </button>
+
+            <a
+                href="consultar.php"
+                class="boton"
+            >
+                Cancelar
+            </a>
+
+        </div>
+
+    </form>
+
+</main>
+
+
+<?php include 'includes/footer.php'; ?>

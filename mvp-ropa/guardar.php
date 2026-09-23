@@ -7,7 +7,7 @@ $color = $_POST["color"];
 $precio = $_POST["precio"];
 $stock = $_POST["stock"];
 
-$stmt = $conexion->prepare("INSERT INTO prendas (descripcion, talla, color, precio, stock) VALUES (?, ?, ?, ?, ?)");
+$stmt = $conexion->prepare("INSERT INTO prenda (descripcion, talla, color, precio, stock) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("sssdi", $descripcion, $talla, $color, $precio, $stock);
 $stmt->execute();
 

@@ -1,7 +1,7 @@
 <?php
 include 'config/conexion.php';
 
-$nombre = $_POST["nombre"];
+$descripcion = $_POST["descripcion"];
 $talla = $_POST["talla"];
 $color = $_POST["color"];
 $precio = $_POST["precio"];
